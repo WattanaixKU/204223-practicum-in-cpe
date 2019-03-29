@@ -11,9 +11,7 @@ int main()
     while(1)
     {
         light = read_adc(PC4);
-        level = (light/128);
-        /*
-        level = 7-(light-380)/50;
+        //level = (light/128);
         if(light<500)
             level = 0;
         else if(light<600)
@@ -29,7 +27,7 @@ int main()
         else if(light<840)
             level = 6;
         else
-        */
+            level = 7;
         set_led_value(level);
     }
 }
